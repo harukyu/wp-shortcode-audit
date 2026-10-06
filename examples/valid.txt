@@ -1,0 +1,7 @@
+[vc_row full_width="stretch_row"]
+  [vc_column width="1/1"]
+    [vc_column_text]<h2>A synthetic demo page</h2><p>Sample content, not customer data.</p>[/vc_column_text]
+    [vc_single_image image="123" img_size="medium"]
+    [vc_empty_space height="24px"]
+  [/vc_column]
+[/vc_row]

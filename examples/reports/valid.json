@@ -1,0 +1,21 @@
+{
+    "schema_version": 1,
+    "analyzer_version": "0.1.0",
+    "complete": true,
+    "bytes": 281,
+    "summary": {
+        "builder_shortcode_count": 5,
+        "shortcode_counts": {
+            "vc_column": 1,
+            "vc_column_text": 1,
+            "vc_empty_space": 1,
+            "vc_row": 1,
+            "vc_single_image": 1
+        },
+        "max_nesting_depth": 3,
+        "errors": 0,
+        "warnings": 0,
+        "notices": 0
+    },
+    "issues": []
+}

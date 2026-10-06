@@ -1,0 +1,9 @@
+{
+  "name": "nakaryu/wp-shortcode-audit",
+  "description": "Read-only structural checks for WPBakery shortcode content",
+  "type": "library",
+  "license": "GPL-2.0-or-later",
+  "require": { "php": ">=7.4" },
+  "autoload": { "psr-4": { "Nakaryu\\ShortcodeAudit\\": "src/" } },
+  "scripts": { "test": ["@php tests/run.php", "@php tests/wordpress.php"] }
+}

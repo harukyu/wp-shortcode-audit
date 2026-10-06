@@ -1,0 +1,27 @@
+name: Prerelease
+on:
+  push:
+    tags: ['v*']
+permissions:
+  contents: write
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+          extensions: zip
+          coverage: none
+      - run: composer test
+      - run: php tools/package.php
+      - name: Verify tag matches plugin version
+        shell: bash
+        run: |
+          version=$(php -r 'require "src/Lexer.php"; require "src/Analyzer.php"; echo Nakaryu\ShortcodeAudit\Analyzer::VERSION;')
+          test "$GITHUB_REF_NAME" = "v$version"
+      - name: Publish prerelease
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release create "$GITHUB_REF_NAME" dist/*.zip --prerelease --title "WP Shortcode Audit $GITHUB_REF_NAME" --notes-file CHANGELOG.md

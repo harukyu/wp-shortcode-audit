@@ -1,0 +1,38 @@
+{
+    "schema_version": 1,
+    "analyzer_version": "0.1.0",
+    "complete": true,
+    "bytes": 130,
+    "summary": {
+        "builder_shortcode_count": 3,
+        "shortcode_counts": {
+            "vc_column": 1,
+            "vc_column_text": 1,
+            "vc_row": 1
+        },
+        "max_nesting_depth": 3,
+        "errors": 2,
+        "warnings": 0,
+        "notices": 0
+    },
+    "issues": [
+        {
+            "code": "misnested_shortcode",
+            "severity": "error",
+            "message": "Close [/vc_column_text] before [/vc_column].",
+            "tag": "vc_column",
+            "offset": 97,
+            "line": 4,
+            "column": 3
+        },
+        {
+            "code": "unexpected_closing_shortcode",
+            "severity": "error",
+            "message": "Closing tag has no matching opening tag.",
+            "tag": "vc_row",
+            "offset": 120,
+            "line": 6,
+            "column": 1
+        }
+    ]
+}

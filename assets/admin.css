@@ -1,0 +1,23 @@
+.wpsa { max-width: 1120px; }
+.wpsa-intro { font-size: 16px; }
+.wpsa-sources { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr)); gap: 20px; }
+.wpsa-card { padding: 24px; margin: 20px 0; background: #fff; border: 1px solid #c3c4c7; border-radius: 8px; }
+.wpsa-sources .wpsa-card { margin: 0; }
+.wpsa-card h2 { margin-top: 0; }
+.wpsa label { display: block; margin: 14px 0 6px; font-weight: 600; }
+.wpsa textarea, .wpsa select { width: 100%; max-width: 100%; }
+.wpsa textarea { font-family: ui-monospace, monospace; }
+.wpsa-search { display: flex; gap: 8px; flex-wrap: wrap; }
+.wpsa-search input[type=search] { flex: 1; min-width: 160px; }
+.wpsa-stats { display: flex; flex-wrap: wrap; gap: 16px 36px; }
+.wpsa-stats dt { color: #50575e; }
+.wpsa-stats dd { font-size: 24px; font-weight: 600; margin: 5px 0 0; }
+.wpsa-alert { padding: 12px; border-left: 4px solid #b32d2e; background: #fcf0f1; }
+.wpsa-success { padding: 12px; border-left: 4px solid #008a20; background: #edfaef; }
+.wpsa-table-wrap { overflow-x: auto; }
+.wpsa table td { vertical-align: top; }
+.wpsa table code { overflow-wrap: anywhere; }
+.wpsa details { margin: 20px 0; }
+.wpsa summary { cursor: pointer; }
+.wpsa-export { display: flex; flex-wrap: wrap; align-items: center; gap: 16px; margin: 20px 0; }
+.wpsa-scope { max-width: 850px; color: #50575e; }
