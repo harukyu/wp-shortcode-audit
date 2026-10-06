@@ -13,12 +13,15 @@ Date: 2026-10-06.
 - Real WP-CLI 2.12.0: one-entry check and bounded batch scan, JSON output, and expected exit codes.
 - Composer manifest validation and plugin ZIP generation from an explicit file allowlist.
 
+## Completed on GitHub
+
+- [Checks #1](https://github.com/harukyu/wp-shortcode-audit/actions/runs/37533797697), commit `4784fbb`: PHP syntax lint, structural/adapter suites, and ZIP packaging passed on PHP 7.4, 8.1, 8.3, and 8.5.
+
 The test site contained synthetic data only. No production website or commercial plugin was involved.
 
 ## Still unverified
 
 - Visual inspection of the admin page and demo in a browser.
-- The GitHub Actions PHP 7.4/8.1/8.3/8.5 matrix, until a remote workflow actually runs.
 - Active WPBakery installations, specific addons, and theme-specific container definitions.
 - A WordPress.org submission or review.
 

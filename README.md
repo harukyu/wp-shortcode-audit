@@ -1,5 +1,7 @@
 # WP Shortcode Audit
 
+[![Checks](https://github.com/harukyu/wp-shortcode-audit/actions/workflows/ci.yml/badge.svg)](https://github.com/harukyu/wp-shortcode-audit/actions/workflows/ci.yml)
+
 **Read-only structural checks for WPBakery content.** Find missing closing tags, crossed nesting, and malformed shortcode syntax before editing or migrating a page.
 
 Built by [Nakaryu GmbH](https://nakaryu.de). This project is independently implemented and has no code dependency on Nakaryu's commercial plugins. It is not an official WPBakery product.
@@ -42,7 +44,7 @@ Reports also show element counts, maximum inspected nesting depth, Unicode line/
 
 ## Install in WordPress
 
-1. Download or build `wp-shortcode-audit-0.1.0.zip`.
+1. Download `wp-shortcode-audit-0.1.0.zip` from [the prerelease](https://github.com/harukyu/wp-shortcode-audit/releases/tag/v0.1.0), or build it locally.
 2. Upload it under **Plugins → Add New Plugin → Upload Plugin**, then activate it.
 3. Open **Tools → Shortcode Audit**.
 4. Select a saved post, page, or WooCommerce product, or paste a raw snippet.
@@ -126,7 +128,7 @@ The parser suite covers malformed input, nesting, escapes, opaque content, Unico
 
 Version 0.1.0 was additionally checked in an isolated **WordPress 7.1.3 / PHP 8.5.5** installation using the WordPress Performance Team's SQLite integration. Saved-entry scans, pasted markup escaping, access/nonce denial, JSON export, and WP-CLI single/batch scans passed. The scan was monitored for database writes and preserved the fixture content byte-for-byte. Active WPBakery/theme-specific metadata compatibility has not yet been tested. Details are in [VALIDATION.md](docs/VALIDATION.md).
 
-GitHub Actions is configured to run lint/tests on PHP 7.4, 8.1, 8.3, and 8.5. A `v*` tag builds a plugin ZIP and creates a prerelease. These remote checks have not run until this repository is pushed to GitHub.
+GitHub Actions runs lint/tests and packaging on PHP 7.4, 8.1, 8.3, and 8.5. All four jobs passed for the initial implementation in [Checks #1](https://github.com/harukyu/wp-shortcode-audit/actions/runs/37533797697). A `v*` tag builds a plugin ZIP and creates a prerelease, or attaches the package to an existing release for that tag.
 
 ## Licensing and attribution
 
