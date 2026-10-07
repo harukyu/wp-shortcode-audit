@@ -1,10 +1,10 @@
-=== WP Shortcode Audit ===
+=== Nakaryu Shortcode Audit ===
 Contributors: nakaryu
 Tags: shortcode, wpbakery, audit, developer-tools, migration
 Requires at least: 6.3
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 0.1.0
+Stable tag: 0.1.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 
@@ -27,7 +27,7 @@ This early release is a structural aid, not a rendering, layout, security, or co
 == Installation ==
 
 1. Upload the plugin ZIP via Plugins > Add New Plugin > Upload Plugin.
-2. Activate WP Shortcode Audit.
+2. Activate Nakaryu Shortcode Audit.
 3. Open Tools > Shortcode Audit.
 
 == Frequently Asked Questions ==
@@ -45,6 +45,9 @@ No. It only means the supported structural checks found no errors. Theme behavio
 They are generated for the current request only. Downloaded JSON files are saved wherever the operator chooses.
 
 == Changelog ==
+
+= 0.1.1 =
+* Nakaryu branding, directory packaging, and Plugin Check input-handling review.
 
 = 0.1.0 =
 * Initial early release: structural analyzer, authenticated admin UI, JSON export, standalone PHP CLI, and WP-CLI checks.

@@ -28,3 +28,11 @@ The test site contained synthetic data only. No production website or commercial
 WP-CLI's bundled dependencies emitted PHP 8.5 deprecation notices during setup; these originated in the external CLI distribution, not this plugin. CLI behavioral checks excluded those deprecation notices while retaining ordinary error reporting. The parser's own tests ran with a strict error handler.
 
 The optional `tests/integration-wordpress.php` script requires an explicitly flagged disposable installation (`WPSA_TEST_ENV === true`) at `http://127.0.0.1:8765`. It creates a synthetic page before checking the read-only scanner. It refuses to run against an ordinary site.
+
+## Version 0.1.1 directory preparation — 2026-10-07
+
+- Official WordPress.org Plugin Check (PCP) 2.1.0, CLI with `--require=plugin-check/cli.php` for runtime checks, default full check set, new-submission mode, including low-severity errors and warnings: no outstanding findings for the installable ZIP contents.
+- Existing isolated WordPress integration check rerun after the input-handling and naming changes: saved-entry scan, pasted markup escaping, access/nonce denial, export form, and zero scan writes passed on WordPress 7.1.3 / PHP 8.5.5.
+- Raw shortcode input and raw JSON are deliberately not sanitized as text because that would corrupt the analyzed data. Narrow PHPCS annotations explain their nonce/capability checks, bounded validation, and escaped/JSON-encoded output. Two namespace annotations document the unique `Nakaryu\ShortcodeAudit` namespace, which the automatic prefix detector did not recognize. No checks or result codes were excluded from the Plugin Check command.
+- The standalone CLI is source-only and rejects web requests; the ZIP contains the WordPress admin plugin and WP-CLI adapter.
+- Directory submission and acceptance are separate steps; this report does not claim approval.

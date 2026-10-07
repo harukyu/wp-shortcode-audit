@@ -28,7 +28,7 @@ final class WPBMap {
         ];
     }
 }
-require dirname(__DIR__) . '/wp-shortcode-audit.php';
+require dirname(__DIR__) . '/nakaryu-shortcode-audit.php';
 
 function check($condition, $message) {
     if (!$condition) { throw new RuntimeException($message); }

@@ -8,6 +8,6 @@
 6. Review the publication allowlist: original code, synthetic examples, license, and public documentation only. No production content or commercial-plugin files.
 7. Build with `php tools/package.php`, then inspect the ZIP's contents.
 8. Push the repository. GitHub Actions tests the supported PHP matrix. Only claim remote checks passed after the workflow actually completes.
-9. Tag `v0.1.0` only after the checks pass. The release workflow creates a **prerelease** with an installable ZIP. Promote a stable release only after appropriate staging/builder QA.
+9. Tag each new version only after the checks pass. The release workflow creates a **prerelease** with an installable ZIP. Promote a stable release only after appropriate staging/builder QA.
 
-No WordPress.org listing, live website installation, or existing paid-product change is part of this repository's release process.
+WordPress.org submission uses the installable ZIP after the official Plugin Check. Its manual review is separate from a GitHub release.

@@ -4,8 +4,8 @@ require_once dirname(__DIR__) . '/src/Analyzer.php';
 
 $root = dirname(__DIR__);
 $version = \Nakaryu\ShortcodeAudit\Analyzer::VERSION;
-$allowedDirectories = ['src', 'includes', 'assets', 'bin'];
-$allowedFiles = ['wp-shortcode-audit.php', 'readme.txt', 'README.md', 'LICENSE', 'CHANGELOG.md', 'CONTRIBUTING.md', 'SECURITY.md', 'docs/DE.md', 'docs/demo.html', 'docs/RELEASE.md', 'docs/VALIDATION.md'];
+$allowedDirectories = ['src', 'includes', 'assets'];
+$allowedFiles = ['nakaryu-shortcode-audit.php', 'readme.txt', 'README.md', 'LICENSE', 'CHANGELOG.md', 'CONTRIBUTING.md', 'SECURITY.md', 'docs/DE.md', 'docs/demo.html', 'docs/RELEASE.md', 'docs/VALIDATION.md'];
 if (!class_exists('ZipArchive')) {
     fwrite(STDERR, "The PHP zip extension is required to build a package.\n");
     exit(1);
@@ -13,7 +13,7 @@ if (!class_exists('ZipArchive')) {
 if (!is_dir($root . '/dist')) {
     mkdir($root . '/dist', 0755, true);
 }
-$path = $root . '/dist/wp-shortcode-audit-' . $version . '.zip';
+$path = $root . '/dist/nakaryu-shortcode-audit-' . $version . '.zip';
 $zip = new ZipArchive();
 if ($zip->open($path, ZipArchive::CREATE | ZipArchive::OVERWRITE) !== true) {
     throw new RuntimeException('Cannot create package.');
@@ -35,7 +35,7 @@ foreach ($allowedDirectories as $directory) {
 }
 sort($files);
 foreach ($files as $file) {
-    $zip->addFile($root . '/' . $file, 'wp-shortcode-audit/' . $file);
+    $zip->addFile($root . '/' . $file, 'nakaryu-shortcode-audit/' . $file);
 }
 $zip->close();
 echo 'Built ' . basename($path) . ' with ' . count($files) . " allowlisted files.\n";

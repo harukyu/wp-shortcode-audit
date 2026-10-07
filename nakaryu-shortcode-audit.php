@@ -1,15 +1,15 @@
 <?php
 /**
- * Plugin Name: WP Shortcode Audit
+ * Plugin Name: Nakaryu Shortcode Audit
  * Description: Read-only structural checks for WPBakery shortcode content, with JSON reports and WP-CLI support.
- * Version: 0.1.0
+ * Version: 0.1.1
  * Requires at least: 6.3
  * Requires PHP: 7.4
  * Author: Nakaryu GmbH
  * Author URI: https://nakaryu.de
  * License: GPL-2.0-or-later
  * License URI: https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
- * Text Domain: wp-shortcode-audit
+ * Text Domain: nakaryu-shortcode-audit
  */
 
 defined('ABSPATH') || exit;

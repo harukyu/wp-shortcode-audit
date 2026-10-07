@@ -1,11 +1,12 @@
 <?php
 
+// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedNamespaceFound -- Both classes use the unique Nakaryu company namespace and ShortcodeAudit project namespace.
 namespace Nakaryu\ShortcodeAudit;
 
 /** Conservative structural analysis; this is not a WordPress renderer or layout validator. */
 final class Analyzer
 {
-    public const VERSION = '0.1.0';
+    public const VERSION = '0.1.1';
     public const MAX_BYTES = 2097152;
 
     private array $paired;

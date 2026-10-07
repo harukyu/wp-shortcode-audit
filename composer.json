@@ -1,5 +1,5 @@
 {
-  "name": "nakaryu/wp-shortcode-audit",
+  "name": "nakaryu/nakaryu-shortcode-audit",
   "description": "Read-only structural checks for WPBakery shortcode content",
   "type": "library",
   "license": "GPL-2.0-or-later",

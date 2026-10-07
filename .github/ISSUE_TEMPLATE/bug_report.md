@@ -13,7 +13,7 @@ Paste a small sample here. No customer content or personal data.
 ```
 
 **Versions and configuration**
-- WP Shortcode Audit:
+- Nakaryu Shortcode Audit:
 - PHP:
 - WordPress (if used):
 - WPBakery/theme (if relevant):

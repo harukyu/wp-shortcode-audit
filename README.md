@@ -1,4 +1,4 @@
-# WP Shortcode Audit
+# Nakaryu Shortcode Audit
 
 [![Checks](https://github.com/harukyu/wp-shortcode-audit/actions/workflows/ci.yml/badge.svg)](https://github.com/harukyu/wp-shortcode-audit/actions/workflows/ci.yml)
 
@@ -6,7 +6,7 @@
 
 Built by [Nakaryu GmbH](https://nakaryu.de). This project is independently implemented and has no code dependency on Nakaryu's commercial plugins. It is not an official WPBakery product.
 
-> Early release, version 0.1.0. Passing a scan means no issue was found within the supported structural checks. It does not certify rendering, visual layout, security, or compatibility with a particular theme.
+> Early release, version 0.1.1. Passing a scan means no issue was found within the supported structural checks. It does not certify rendering, visual layout, security, or compatibility with a particular theme.
 
 [Deutsche Anleitung](docs/DE.md) · [Example report](docs/demo.html) · [Changelog](CHANGELOG.md) · [Contributing](CONTRIBUTING.md)
 
@@ -44,7 +44,7 @@ Reports also show element counts, maximum inspected nesting depth, Unicode line/
 
 ## Install in WordPress
 
-1. Download `wp-shortcode-audit-0.1.0.zip` from [the prerelease](https://github.com/harukyu/wp-shortcode-audit/releases/tag/v0.1.0), or build it locally.
+1. Download `nakaryu-shortcode-audit-0.1.1.zip` from [GitHub releases](https://github.com/harukyu/wp-shortcode-audit/releases), or build it locally.
 2. Upload it under **Plugins → Add New Plugin → Upload Plugin**, then activate it.
 3. Open **Tools → Shortcode Audit**.
 4. Select a saved post, page, or WooCommerce product, or paste a raw snippet.
@@ -97,7 +97,7 @@ An explicit closing tag in a document allows inspection of an otherwise unknown 
 Configure your content model if a theme or addon behaves differently:
 
 ```php
-add_filter('wp_shortcode_audit_options', static function (array $options): array {
+add_filter('wpsa_shortcode_audit_options', static function (array $options): array {
     $options['additional_paired_tags'][] = 'my_container';
     $options['additional_standalone_tags'][] = 'vc_custom_leaf';
     return $options;
@@ -135,3 +135,5 @@ GitHub Actions runs lint/tests and packaging on PHP 7.4, 8.1, 8.3, and 8.5. All 
 Copyright 2026 Nakaryu GmbH. Licensed under **GPL-2.0-or-later**; see [LICENSE](LICENSE). All examples are synthetic. No paid plugin, customer content, credentials, or third-party WPBakery implementation is bundled.
 
 The classification uses publicly documented shortcode/container concepts: [WPBakery container documentation](https://kb.wpbakery.com/devs/developer-tutorials/nested-shortcodes-container/), [content parameters](https://kb.wpbakery.com/devs/element-development/params-array/), and [WordPress escaping rules](https://developer.wordpress.org/reference/functions/get_shortcode_regex/). WPBakery is a third-party product name; this project is independently maintained.
+
+The installable plugin ZIP excludes the standalone `bin/` CLI. Clone or download this repository to use that CLI. WordPress administrators can use the included WP-CLI command.

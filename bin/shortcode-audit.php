@@ -1,6 +1,10 @@
 #!/usr/bin/env php
 <?php
 
+if (PHP_SAPI !== 'cli') {
+    exit;
+}
+
 require_once dirname(__DIR__) . '/src/Lexer.php';
 require_once dirname(__DIR__) . '/src/Analyzer.php';
 

@@ -1,10 +1,10 @@
-# WP Shortcode Audit — Anleitung
+# Nakaryu Shortcode Audit — Anleitung
 
 Dieses kostenlose Werkzeug prüft die Struktur gespeicherter WPBakery-Inhalte. Es zeigt beispielsweise fehlende Abschluss-Tags, falsche Verschachtelung und unvollständige Attribut-Anführungszeichen. Der Inhalt wird dabei weder ausgeführt noch verändert.
 
 ## WordPress
 
-1. `wp-shortcode-audit-0.1.0.zip` unter **Plugins → Installieren → Plugin hochladen** installieren und aktivieren.
+1. `nakaryu-shortcode-audit-0.1.1.zip` unter **Plugins → Installieren → Plugin hochladen** installieren und aktivieren.
 2. **Werkzeuge → Shortcode Audit** öffnen.
 3. Eine Seite, einen Beitrag oder ein Produkt auswählen; alternativ einen Shortcode-Ausschnitt einfügen.
 4. Fundstellen anhand von Zeile und Spalte prüfen. Bei Bedarf den JSON-Bericht herunterladen.

@@ -1,5 +1,6 @@
 <?php
 
+// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedNamespaceFound -- Both classes use the unique Nakaryu company namespace and ShortcodeAudit project namespace.
 namespace Nakaryu\ShortcodeAudit;
 
 /** Tokenizes syntax only. Never calls WordPress or runs shortcode callbacks. */
